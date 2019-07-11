@@ -46,6 +46,7 @@ public class CheeseController {
 
 
         model.addAttribute("cheeses",cat.getCheeses());
+        model.addAttribute("title",cat.getName());
 
         return "cheese/index";
     }
@@ -56,6 +57,7 @@ public class CheeseController {
 
 
         model.addAttribute("categories",categoryDao.findAll());
+        model.addAttribute("title","Category links");
 
         return "cheese/list";
     }
